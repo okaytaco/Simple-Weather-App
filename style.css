@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #7368ff, #a892ff);
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('image/bg.jpeg') no-repeat center center/cover;
+  z-index: 0;
+  filter: brightness(0.9);
+}
+
+.weather-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  animation: containerFade 1.5s ease-out;
+  min-width: 300px;
+}
+
+input#city-input {
+  padding: 10px 15px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 70%;
+  outline: none;
+}
+
+button#get-weather {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #8a2be2, #da70d6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-bottom: 20px;
+}
+
+button#get-weather:hover {
+  transform: scale(1.05);
+}
+
+.weather-info p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+@keyframes containerFade {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.4s; }
+.fade-in.delay-2 { animation-delay: 0.8s; }
+.fade-in.delay-3 { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
