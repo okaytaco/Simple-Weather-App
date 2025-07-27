@@ -23,4 +23,16 @@ document.getElementById("get-weather").addEventListener("click", () => {
     });
 });
 
+const container = document.querySelector(".weather-container");
+const button = document.getElementById("get-weather");
+
+button.addEventListener("mouseenter", () => {
+  container.style.boxShadow = "0 0 15px white";
+});
+
+button.addEventListener("mouseleave", () => {
+  container.style.boxShadow = "0 8px 32px rgba(0, 0, 0, 0.25)";
+});
+
+
 })

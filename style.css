@@ -89,3 +89,31 @@ button#get-weather:hover {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+
+
+
+button#get-weather:hover {
+  outline: 2px solid white;
+  outline-offset: 3px;
+  filter: brightness(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+button#get-weather:active {
+  transform: scale(0.96);
+  filter: brightness(0.9);
+  box-shadow: none;
+}
+
+
+button#get-weather:hover ~ .weather-info,
+button#get-weather:hover ~ #city-input,
+button#get-weather:hover ~ h1 {
+
+}
+
+
+
+
